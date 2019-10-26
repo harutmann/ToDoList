@@ -1,0 +1,135 @@
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap');
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+body {
+  width: auto;
+  min-height: 300px;
+  background-color: #524d49;
+  font-family: 'IM Fell English SC', serif;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.wrapper {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content {
+  margin-left: 150px;
+  width: 300px;
+  padding: 50px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 500px;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.image {
+  width: 475px;
+  height: 475px;
+  margin: 0 auto;
+  background-image: url("../../build/img/hmm.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  // transform: scaleX(-1);
+}
+
+.button {
+  margin: 50px auto;
+  font-family: 'IM Fell English SC', serif;
+  text-align: center;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  width: 300px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.2s ease-out 0.2s;
+
+  &:hover {
+    background-color: rgba(0,0,0,0.6);
+    color: #a3fffa;
+    text-shadow: 0 0 7px rgb(239, 242, 220);
+    transform: rotate(-2deg);
+    transition: 0.2s ease-out 0.2s;
+  }
+
+  &:active,
+  &:focus {
+    background-color: rgba(0,0,0,0.5);
+    text-shadow: 0 0 7px rgb(239, 242, 220);
+  }
+}
+
+.listTitle {
+  margin: 0;
+  color: white;
+}
+
+#myInput {
+  box-sizing: border-box;
+  padding-left: 20px;
+  border-radius: 4px;
+  width: 300px;
+
+  &::placeholder {
+    font-family: 'IM Fell English SC', serif;
+  }
+
+  &:focus {
+    box-sizing: border-box;
+  }
+}
+
+#myList {
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  padding-top: 20px;
+  list-style: none;
+}
+
+#myList li {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: #a3fffa;
+  }
+}
+
+#myList li.checked {
+  color:rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
+
+  &::before {
+    content: '👌';
+    position: absolute;
+    color:rgba(0, 0, 0, 1);
+    left: -30px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
