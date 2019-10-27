@@ -37,18 +37,20 @@ body {
 }
 
 .image {
+
   width: 475px;
-  height: 475px;
+  height: 500px;
   margin: 0 auto;
+  margin-top: 125px;
   background-image: url("../../build/img/hmm.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   // transform: scaleX(-1);
 }
 
 .button {
-  margin: 50px auto;
+  margin: 10px auto;
   font-family: 'IM Fell English SC', serif;
   text-align: center;
   line-height: 50px;
@@ -79,6 +81,8 @@ body {
   }
 }
 
+
+
 .listTitle {
   margin: 0;
   color: white;
@@ -87,8 +91,9 @@ body {
 #myInput {
   box-sizing: border-box;
   padding-left: 20px;
-  border-radius: 4px;
+  border-radius: 3px;
   width: 300px;
+  height: 40px;
 
   &::placeholder {
     font-family: 'IM Fell English SC', serif;
@@ -121,7 +126,7 @@ body {
   text-decoration: line-through;
 
   &::before {
-    content: '👌';
+    content: '✔️';
     position: absolute;
     color:rgba(0, 0, 0, 1);
     left: -30px;
